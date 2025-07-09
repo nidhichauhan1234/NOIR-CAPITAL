@@ -9,7 +9,7 @@ const Header = () => {
   const navItems = [
     { name: 'Home', path: '/' },
     { name: 'Services', path: '/services' },
-    { name: 'Careers', path: '/careers', disabled: true },
+    { name: 'Careers', path: '/careers' },
     { name: 'Contact Us', path: '/contact' }, // ✅ Enabled by removing disabled
   ];
 

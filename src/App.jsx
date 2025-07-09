@@ -6,6 +6,7 @@ import Footer from './components/Footer.jsx';
 import Index from './pages/index.jsx';
 import Services from './pages/Services.jsx';
 import NotFound from './pages/NotFound.jsx';
+import Careers from './pages/Careers.jsx';
 import Contact from './pages/Contact.jsx'; // ✅ Import Contact page
 import './styles/style.css';
 
@@ -21,6 +22,7 @@ const App = () => {
           <Route path="/services" element={<Services />} />
           <Route path="/contact" element={<Contact />} /> {/* ✅ Add Contact route */}
           <Route path="*" element={<NotFound />} />
+           <Route path="/careers" element={<Careers />} />
         </Routes>
         <Footer />
       </BrowserRouter>
