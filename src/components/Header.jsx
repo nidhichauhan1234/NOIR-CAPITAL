@@ -1,6 +1,5 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { useState } from 'react';
 import { Menu, X } from 'lucide-react';
 
 const Header = () => {
@@ -11,7 +10,7 @@ const Header = () => {
     { name: 'Home', path: '/' },
     { name: 'Services', path: '/services' },
     { name: 'Careers', path: '/careers', disabled: true },
-    { name: 'Contact Us', path: '/contact', disabled: true },
+    { name: 'Contact Us', path: '/contact' }, // ✅ Enabled by removing disabled
   ];
 
   return (
@@ -28,18 +27,18 @@ const Header = () => {
               <Link
                 key={item.name}
                 to={item.path}
-                className={`nav-link ${item.disabled
-                  ? 'disabled'
-                  : location.pathname === item.path
+                className={`nav-link ${
+                  item.disabled
+                    ? 'disabled'
+                    : location.pathname === item.path
                     ? 'active'
                     : ''
-                  }`}
+                }`}
                 onClick={item.disabled ? (e) => e.preventDefault() : undefined}
               >
                 {item.name}
               </Link>
             ))}
-            <button className="talk-btn">Let's Talk</button>
           </nav>
 
           {/* Mobile Toggle Button */}
@@ -56,12 +55,13 @@ const Header = () => {
                 <Link
                   key={item.name}
                   to={item.path}
-                  className={`nav-link-mobile ${item.disabled
-                    ? 'disabled'
-                    : location.pathname === item.path
+                  className={`nav-link-mobile ${
+                    item.disabled
+                      ? 'disabled'
+                      : location.pathname === item.path
                       ? 'active'
                       : ''
-                    }`}
+                  }`}
                   onClick={(e) => {
                     if (item.disabled) {
                       e.preventDefault();
