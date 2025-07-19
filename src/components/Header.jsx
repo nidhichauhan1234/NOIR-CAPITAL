@@ -10,7 +10,8 @@ const Header = () => {
     { name: 'Home', path: '/' },
     { name: 'Services', path: '/services' },
     { name: 'Careers', path: '/careers' },
-    { name: 'Contact Us', path: '/contact' }, // ✅ Enabled by removing disabled
+    { name: 'Contact Us', path: '/contact' },
+    { name: 'HR Dashboard', path: '/hr-dashboard' },
   ];
 
   return (
@@ -20,8 +21,6 @@ const Header = () => {
           <Link to="/" className="logo">
             NOIR CAPITAL
           </Link>
-
-          {/* Desktop Navigation */}
           <nav className="nav-desktop">
             {navItems.map((item) => (
               <Link
@@ -40,14 +39,10 @@ const Header = () => {
               </Link>
             ))}
           </nav>
-
-          {/* Mobile Toggle Button */}
           <button className="menu-toggle" onClick={() => setIsOpen(!isOpen)}>
             {isOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
         </div>
-
-        {/* Mobile Menu */}
         {isOpen && (
           <nav className="nav-mobile">
             <div className="nav-mobile-links">
