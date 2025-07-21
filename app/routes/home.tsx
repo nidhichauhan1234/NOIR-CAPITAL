@@ -7,6 +7,9 @@ export function meta({}: Route.MetaArgs) {
     { name: "description", content: "Welcome to React Router!" },
   ];
 }
+<div className="text-red-500 text-4xl font-bold p-10">
+  Tailwind is working!
+</div>
 
 export default function Home() {
   return <Welcome />;
