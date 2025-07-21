@@ -13,6 +13,53 @@ const jobApplications = [
 const HRDashboard = () => {
   const [selectedJob, setSelectedJob] = useState(null);
 
+  // Simulated functions for fetching candidate info from different sources
+  function fetchFromATS() {
+    // Simulate fetching from an ATS
+    return [
+      { name: 'Amit Sharma', source: 'ATS', status: 'Pending' },
+      { name: 'Priya Singh', source: 'ATS', status: 'Reviewed' },
+    ];
+  }
+
+  function fetchFromResumeDB() {
+    // Simulate fetching from a resume database or Google Drive
+    return [
+      { name: 'Rahul Verma', source: 'Resume DB', status: 'Pending' },
+    ];
+  }
+
+  function fetchFromHRDashboard() {
+    // Simulate fetching from the HR dashboard itself
+    return [
+      { name: 'Sneha Rao', source: 'HR Dashboard', status: 'Interviewed' },
+    ];
+  }
+
+  function fetchFromEmailInbox() {
+    // Simulate fetching from email inbox
+    return [
+      { name: 'Vikas Kumar', source: 'Email', status: 'Pending' },
+    ];
+  }
+
+  function fetchFromCareerPortal() {
+    // Simulate fetching from company career portal/backend
+    return [
+      { name: 'Anjali Mehta', source: 'Career Portal', status: 'Reviewed' },
+    ];
+  }
+
+  // Example: How to view a resume (in a real app, this would open a modal or link to a file)
+  function viewResume(candidate) {
+    alert(`Resume for ${candidate.name}:\n\n(Simulated resume preview or download link here)`);
+  }
+
+  // Make viewResume globally accessible for modal button
+  if (typeof window !== 'undefined') {
+    window.viewResume = viewResume;
+  }
+
   return (
     <div className="hr-dashboard-container">
       <h1>HR Dashboard: Job Applications Overview</h1>

@@ -1147,6 +1147,53 @@ body {
   color: #d4af37;
 }
 
+/* HR Dashboard Info Box Styles */
+.hr-info-box {
+  background: #232323;
+  border-left: 4px solid #d4af37;
+  padding: 1.2rem 1.5rem;
+  margin-bottom: 2rem;
+  border-radius: 8px;
+  color: #fff;
+}
+.hr-info-box h2 {
+  color: #d4af37;
+  font-size: 1.1rem;
+  margin-bottom: 0.7rem;
+}
+.hr-info-box ul {
+  margin: 0;
+  padding-left: 1.2rem;
+  font-size: 1rem;
+}
+.hr-info-box li {
+  margin-bottom: 0.3rem;
+  line-height: 1.5;
+}
+
+/* HR Dashboard Source Buttons */
+.hr-source-btns {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+  margin-bottom: 1.5rem;
+}
+.source-btn {
+  background: #232323;
+  color: #d4af37;
+  border: 1px solid #d4af37;
+  border-radius: 6px;
+  padding: 0.5rem 1.2rem;
+  font-size: 0.97rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+.source-btn:hover {
+  background: #d4af37;
+  color: #232323;
+}
+
 .main-wrapper {
   background-color: #000000;
   min-height: 100vh;
