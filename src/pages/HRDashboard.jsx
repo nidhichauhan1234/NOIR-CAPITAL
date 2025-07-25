@@ -17,7 +17,7 @@ const HRDashboard = () => {
   function fetchFromATS() {
     // Simulate fetching from an ATS
     return [
-      { name: 'Amit Sharma', source: 'ATS', status: 'Pending' },
+    { name: 'a Sharma', source: 'ATS', status: 'Pending' },
       { name: 'Priya Singh', source: 'ATS', status: 'Reviewed' },
     ];
   }
