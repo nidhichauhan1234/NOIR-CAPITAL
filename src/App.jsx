@@ -8,6 +8,8 @@ import Services from './pages/Services.jsx';
 import NotFound from './pages/NotFound.jsx';
 import Careers from './pages/Careers.jsx';
 import Contact from './pages/Contact.jsx'; // ✅ Import Contact page
+import HRDashboard from './pages/HRDashboard.jsx'; // Import HRDashboard page
+import Dashboard from './pages/Dashboard.jsx'; // Import Dashboard page
 import './styles/style.css';
 
 const queryClient = new QueryClient();
@@ -20,7 +22,9 @@ const App = () => {
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/services" element={<Services />} />
-          <Route path="/contact" element={<Contact />} /> {/* ✅ Add Contact route */}
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/hr-dashboard" element={<HRDashboard />} /> {/* Add HR Dashboard route */}
+          <Route path="/dashboard" element={<Dashboard />} /> {/* Add Dashboard route */}
           <Route path="*" element={<NotFound />} />
            <Route path="/careers" element={<Careers />} />
         </Routes>
